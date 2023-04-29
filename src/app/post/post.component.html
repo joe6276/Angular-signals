@@ -2,9 +2,9 @@
 
 <div class="flex flex-col space-x-6 md:flex-row">
     
-    <div class="flex flex-col space-y-2 md:w-1/2">
+    <div class="flex flex-col space-y-2 md:w-1/2" *ngIf="$userPosts| async as userDetail">
            
-  <div class="flex flex-col p-2  space-x-6 md:flex-row" >
+  <div class="flex flex-col p-2  space-x-6 md:flex-row" *ngFor="let post of userDetail" (click)=" changeComments(post.id)" >
 
     <div class="flex w-1/6">
       <img src="https://sb.kaleidousercontent.com/67418/1672x1018/6463a5af0d/screenshot-2022-05-24-at-15-22-28.png" alt="" class="rounded">
@@ -12,12 +12,12 @@
 
     <div class="flex flex-col space-y-2  md:w-5/6 ">
       <div class="flex item-center space-x-2">
-        <p class="text-black">Elon Musk</p>
+        <p class="text-black">{{post.user? post.user.name :'Default'}}</p>
         <ion-icon class="text-2xl text-TBlue" name="checkmark-circle"></ion-icon>
         <p><ion-icon  class="text-2xl text-TBlue" name="logo-twitter"></ion-icon></p>
       </div>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eius officia, voluptatibus reprehenderit earum quo delectus! Hic iste eaque similique.
+        {{post.body}}
       </p>
       <hr>
       <div class=" flex  space-x-8 ">

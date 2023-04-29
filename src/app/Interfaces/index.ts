@@ -7,7 +7,7 @@ export interface Post{
     body:string
 }
 
-export interface Comment{
+export interface Comments{
     name:string
     id:number
     body:string
@@ -15,6 +15,15 @@ export interface Comment{
     postId:number 
 }
 
+
+
+export interface UserPosts{
+    userId:number
+    id:number
+    title:string
+    body:string
+    user?:User
+}
 
 export interface User{
    id:number

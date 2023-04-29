@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { NavComponent } from './nav/nav.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,

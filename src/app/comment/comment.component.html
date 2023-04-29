@@ -1,5 +1,6 @@
-   
-  <div class="flex flex-col p-2  space-x-6 md:flex-row" >
+<div *ngIf="comments$| async as comments">
+     <h1> Post Comments</h1>
+  <div class="flex flex-col p-2  space-x-6 md:flex-row"  *ngFor="let comment of comments" >
 
     <div class="flex w-1/6">
       <img src="https://sb.kaleidousercontent.com/67418/1672x1018/6463a5af0d/screenshot-2022-05-24-at-15-22-28.png" alt="" class="rounded">
@@ -7,104 +8,32 @@
 
     <div class="flex flex-col space-y-2  md:w-5/6 ">
       <div class="flex item-center space-x-2">
-        <p class="text-black">Elon Musk</p>
+        <p class="text-black"></p>
         <ion-icon class="text-2xl text-TBlue" name="checkmark-circle"></ion-icon>
         <p><ion-icon  class="text-2xl text-TBlue" name="logo-twitter"></ion-icon></p>
       </div>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eius officia, voluptatibus reprehenderit earum quo delectus! Hic iste eaque similique.
+       {{comment.name}}
       </p>
       <hr>
       <div class=" flex  space-x-8 ">
         
         <div class="flex space-x-2 items-center">
           <p> <ion-icon name="chatbubble-outline"></ion-icon> </p>
-          <p>200</p>
+          <p>0</p>
         </div>
 
         <div class="flex space-x-2 items-center">
           <img src="../assets/retweet.png" alt="">
-          <p>200</p>
+          <p>0</p>
         </div>
 
         <div class="flex space-x-2 items-center">
           <ion-icon class="font-bold text-LikeRed  text-2xl" name="heart-outline"></ion-icon>
-          <p>200</p>
+          <p>0</p>
         </div>
       
       </div>
     </div>
   </div>
-
-  <div class="flex flex-col p-2  space-x-6 md:flex-row" >
-
-    <div class="flex w-1/6">
-      <img src="https://sb.kaleidousercontent.com/67418/1672x1018/6463a5af0d/screenshot-2022-05-24-at-15-22-28.png" alt="" class="rounded">
-    </div>
-
-    <div class="flex flex-col space-y-2  md:w-5/6 ">
-      <div class="flex item-center space-x-2">
-        <p class="text-black">Elon Musk</p>
-        <ion-icon class="text-2xl text-TBlue" name="checkmark-circle"></ion-icon>
-        <p><ion-icon  class="text-2xl text-TBlue" name="logo-twitter"></ion-icon></p>
-      </div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eius officia, voluptatibus reprehenderit earum quo delectus! Hic iste eaque similique.
-      </p>
-      <hr>
-      <div class=" flex  space-x-8 ">
-        
-        <div class="flex space-x-2 items-center">
-          <p> <ion-icon name="chatbubble-outline"></ion-icon> </p>
-          <p>200</p>
-        </div>
-
-        <div class="flex space-x-2 items-center">
-          <img src="../assets/retweet.png" alt="">
-          <p>200</p>
-        </div>
-
-        <div class="flex space-x-2 items-center">
-          <ion-icon class="font-bold text-LikeRed  text-2xl" name="heart-outline"></ion-icon>
-          <p>200</p>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col p-2  space-x-6 md:flex-row" >
-
-    <div class="flex w-1/6">
-      <img src="https://sb.kaleidousercontent.com/67418/1672x1018/6463a5af0d/screenshot-2022-05-24-at-15-22-28.png" alt="" class="rounded">
-    </div>
-
-    <div class="flex flex-col space-y-2  md:w-5/6 ">
-      <div class="flex item-center space-x-2">
-        <p class="text-black">Elon Musk</p>
-        <ion-icon class="text-2xl text-TBlue" name="checkmark-circle"></ion-icon>
-        <p><ion-icon  class="text-2xl text-TBlue" name="logo-twitter"></ion-icon></p>
-      </div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eius officia, voluptatibus reprehenderit earum quo delectus! Hic iste eaque similique.
-      </p>
-      <hr>
-      <div class=" flex  space-x-8 ">
-        
-        <div class="flex space-x-2 items-center">
-          <p> <ion-icon name="chatbubble-outline"></ion-icon> </p>
-          <p>200</p>
-        </div>
-
-        <div class="flex space-x-2 items-center">
-          <img src="../assets/retweet.png" alt="">
-          <p>200</p>
-        </div>
-
-        <div class="flex space-x-2 items-center">
-          <ion-icon class="font-bold text-LikeRed  text-2xl" name="heart-outline"></ion-icon>
-          <p>200</p>
-        </div>
-      
-      </div>
-    </div>
-  </div>
+</div>

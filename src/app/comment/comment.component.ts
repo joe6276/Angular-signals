@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { PostService } from '../Services/post.service';
 
 @Component({
   selector: 'app-comment',
@@ -10,4 +11,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class CommentComponent {
 
-}
+ constructor( private postService:PostService){}
+
+ comments$=this.postService.postcomments$
+ }
